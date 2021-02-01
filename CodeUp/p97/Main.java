@@ -12,9 +12,9 @@ public class Main {
             
             // board 입력 받기
             for(int i=1;i <= 19;i++) {
-                String[] tar = br.readLine().split(" ");
+                String[] ar = br.readLine().split(" ");
                 for(int j=1;j <= 19;j++) {
-                    board[i][j] = tar[j];
+                    board[i][j] = ar[j - 1];
                 }
             }
             int n = Integer.parseInt(br.readLine());
@@ -22,7 +22,6 @@ public class Main {
             for(int i=0;i<n;i++) {
                 list.add(br.readLine());
             }
-            System.out.println(list);
 
             for(int i=0;i<list.size();i++) {
                 String[] point = list.get(i).split(" ");
@@ -37,9 +36,9 @@ public class Main {
             }
 
             // 결과 출력
-            for(int i=0;i<board.length;i++) {
-                for(int j=0;j<board[i].length;j++) {
-                    System.out.println(board[i][j] + " ");
+            for(int i=1;i <= board.length - 1;i++) {
+                for(int j=1;j < board[i].length;j++) {
+                    System.out.print(board[i][j] + " ");
                 }
                 System.out.println();
             }
