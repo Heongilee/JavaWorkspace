@@ -1,4 +1,4 @@
-package p01;
+package pb01;
 
 import java.io.*;
 import java.net.*;
@@ -19,12 +19,11 @@ public class Main {
         try {
             URL urlObject = new URL(url);
             HttpURLConnection conn = (HttpURLConnection) urlObject.openConnection();
+            // TODO : do something!!!
 
         } catch (MalformedURLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
